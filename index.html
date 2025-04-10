@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenworks | Brushless Cordless Push Lawn Mower</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            gap: 30px;
+        }
+        
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-name {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .stars {
+            color: #f39c12;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        
+        .review-count {
+            color: #7f8c8d;
+        }
+        
+        .offers-box {
+            background-color: #e8f4fd;
+            border: 1px solid #b3d7ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .offers-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        
+        .offer-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .offer-item:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        .product-info-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            overflow: hidden;
+        }
+        
+        .info-tabs {
+            display: flex;
+            background-color: #f3f3f3;
+        }
+        
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .tab.active {
+            background-color: white;
+            border-top: 3px solid #3498db;
+        }
+        
+        .tab-content {
+            padding: 25px;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+        
+        .feature-item h4 {
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .customer-reviews {
+            margin: 40px 0;
+        }
+        
+        .review-section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .review {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .reviewer {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .review-date {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .disclaimer-box {
+            background-color: #f9f3e8;
+            border: 1px solid #f5e3c3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 30px 0;
+            font-size: 14px;
+            color: #7f5b26;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Greenworks</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="product-section">
+            <div class="product-image">
+                <img src="greenworks1.png" alt="UltraGlow Pro Facial Cleansing Brush" />
+            </div>
+            
+            <div class="product-details">
+                <h1 class="product-name">Greenworks Brushless Cordless Lawn Mower</h1>
+                
+                <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-count">4.8/5 (237 Reviews)</div>
+                </div>
+                
+                <div class="product-price">$153.99</div>
+                
+                <div class="offers-box">
+                    <h3 class="offers-title">Special Offers</h3>
+                    <div class="offer-item">20% off for new customers with code: GREENWORKS20</div>
+                    <div class="offer-item">Free shipping on orders over $75</div>
+                    <div class="offer-item">Battery and Charger Included</div>
+                    <div class="offer-item">30-day money-back guarantee</div>
+                </div>
+                
+                <a href="#" class="cta-button">Know More</a>
+            </div>
+        </section>
+        
+        <section class="product-info-box">
+            <div class="info-tabs">
+                <div class="tab active">Description</div>
+                <div class="tab">Specifications</div>
+                <div class="tab">How to Use</div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <h3>CORDLESS LAWN MOWER</h3>
+                    <p>Get more done, faster, with Greenworks electric lawn mowers. This 24V push lawn mower provides the power you need with up to 30 minutes of runtime on a fully charged 4.0Ah battery (varies based on grass condition and operator technique)..No Load Speed : 3550 RPM, Voltage : 24 V</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <h4>13” POLY DECK</h4>
+                            <p>The 13” poly deck on this cordless lawn mower allows for easy maneuverability around your yard. Brushless motor provides more torque, quiet operation and a longer life. Rust-resistant deck</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4>VERSATILE</h4>
+                            <p>Battery powered lawn mower has a single lever 5-position height adjustment for the best cut in all environments. The 2-in-1 design allows you to mulch or rear bag grass clippings.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4>MAINTENANCE FREE</h4>
+                            <p>This walk behind lawn mower is virtually maintenance free, with no gas, no oil and no emissions. It starts instantly and is quiet but delivers gas-like power for your toughest projects.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4>Whats in the box</h4>
+                            <p>Battery operated lawn mower comes with grass collection bag, 24V 4.0Ah battery, charger, and operator’s manual. 3-year (tool / battery) warranty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="customer-reviews">
+            <h2 class="review-section-title">Customer Reviews</h2>
+            
+            <div class="review">
+                <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+                </div>
+                <h4 class="reviewer">An engineer's review</h4>
+                <div class="review-date">March 15, 2025</div>
+                <p>I'm updating this to 5 stars because even given the issues below, I would buy this product again over any competitors I could find in this product category. I've used this for 4 years now and it still works the same as it did new. I remarked below on poor cut quality in some scenarios where blade speed can fall too low which is still a problem, but this really only occurs when mulching. Cutting thick or tall grass with the discharge open improves the pace and cut quality in this scenario but there are limitations, mowing fields is still going to produce a crappy cut no matter what you use.</p>
+            </div>
+            
+            <div class="review">
+                <div class="product-rating">
+                    <div class="stars">★★★★☆</div>
+                </div>
+                <h4 class="reviewer">Heidie R</h4>
+                <div class="review-date">February 28, 2025</div>
+                <p>I was skeptical that this would cut through the sudden 8 inch growth of wet grass that had recently popped up, but I had had enough of trying to start and and maneuver my tank of a gas mower that I've had for over a decade. So, I decided on this very reasonably priced and apparently very light mower. AND IT WORKED!</p>
+            </div>
+            
+            <div class="review">
+                <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+                </div>
+                <h4 class="reviewer">	Debra Orlando</h4>
+                <div class="review-date">April 2, 2025</div>
+                <p>Used it for the first time for a tiny lawn. It worked pretty well even tho the grass was pretty high. It was easy to maneuver for a senior and east to empty. My only complaint is the screws they sent for assembly were too large. I bought the right size and they worked well.</p>
+            </div>
+        </section>
+        
+        <div class="disclaimer-box">
+            <h4>Shipping Policy</h4>
+            <p>Transit times vary due to location and delivery availability, but we strive to deliver your new riding mower within the estimated time frame of 5-7 business days. However, due to high demand and occasional logistical challenges, there may be instances where delivery takes longer than expected.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">About Greenworks</h3>
+                    <p>At Greenworks, we've built our brand on battery-first expertise, offering versatile voltage platforms ranging from 24V to 80V to ensure power for everyone, everywhere. Our efficient tools offer better-than-gas power while remaining quiet, lightweight and low-maintenance. We're committed to sustainability and believe in a life powered by innovation, designed for families and built for a better future. Life. Powered. By. Greenworks.</p>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p>Address: 500 South Main Street, Suite #450, Mooresville, North Carolina 28115, USA</p>
+                    <p>Phone: (917) 846-8415</p>
+                    <p>Email: support@beautytech.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Help & Support</h3>
+                    <p>Shipping Information</p>
+                    <p>Returns & Refunds</p>
+                    <p>FAQs</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Greenworks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Update tab content (in a real implementation, this would show the correct content)
+                // For this demo, we'll just keep the first tab content visible
+            });
+        });
+    </script>
+</body>
+</html>
