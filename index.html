@@ -65,19 +65,19 @@
         .product-image {
             flex: 1;
             min-width: 300px;
+            text-align: center;
         }
         
         .main-image {
-            width: 100%;
-            height: 400px;
+            max-width: 100%;
             border-radius: 8px;
-            object-fit: cover;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin-bottom: 15px;
         }
         
         .thumbnail-container {
             display: flex;
+            justify-content: center;
             gap: 10px;
             margin-top: 10px;
         }
@@ -90,6 +90,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             opacity: 0.7;
+            border: 2px solid transparent;
         }
         
         .thumbnail:hover {
@@ -134,25 +135,6 @@
             color: #7f8c8d;
         }
         
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .quantity-selector label {
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        
-        .quantity-selector input {
-            width: 60px;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            text-align: center;
-        }
-        
         .offers-box {
             background-color: #e8f4fd;
             border: 1px solid #b3d7ff;
@@ -180,12 +162,6 @@
             margin-right: 10px;
         }
         
-        .action-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
         .cta-button {
             display: inline-block;
             background-color: #e74c3c;
@@ -195,65 +171,12 @@
             font-size: 18px;
             font-weight: bold;
             text-decoration: none;
+            margin-top: 10px;
             transition: background-color 0.3s;
-            border: none;
-            cursor: pointer;
         }
         
         .cta-button:hover {
             background-color: #c0392b;
-        }
-        
-        .wishlist-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-            color: #2c3e50;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .wishlist-button:hover {
-            background-color: #f5f5f5;
-        }
-        
-        .stock-info {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: #e8f4fd;
-            color: #3498db;
-            border-radius: 4px;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-        
-        .breadcrumb {
-            display: flex;
-            list-style: none;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        
-        .breadcrumb li:not(:last-child):after {
-            content: "›";
-            margin: 0 8px;
-            color: #7f8c8d;
-        }
-        
-        .breadcrumb a {
-            color: #7f8c8d;
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            color: #3498db;
         }
         
         .product-info-box {
@@ -310,61 +233,6 @@
             color: #2c3e50;
         }
         
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        
-        .specs-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .specs-table th, .specs-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .specs-table th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        .how-to-use-steps {
-            counter-reset: step-counter;
-            margin-top: 15px;
-        }
-        
-        .step {
-            position: relative;
-            padding-left: 50px;
-            margin-bottom: 20px;
-        }
-        
-        .step:before {
-            content: counter(step-counter);
-            counter-increment: step-counter;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: #3498db;
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-        
-        .step h4 {
-            margin-bottom: 8px;
-            color: #2c3e50;
-        }
-        
         .customer-reviews {
             margin: 40px 0;
         }
@@ -392,138 +260,6 @@
             color: #7f8c8d;
             font-size: 14px;
             margin-bottom: 10px;
-        }
-        
-        .related-products {
-            margin: 40px 0;
-        }
-        
-        .related-products-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        .related-products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .related-product {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .related-product:hover {
-            transform: translateY(-5px);
-        }
-        
-        .related-product-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .related-product-info {
-            padding: 15px;
-        }
-        
-        .related-product-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #2c3e50;
-        }
-        
-        .related-product-price {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-        
-        .faq-section {
-            margin: 40px 0;
-        }
-        
-        .faq-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        .faq-item {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 15px 20px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-question:after {
-            content: "+";
-            font-size: 20px;
-            color: #3498db;
-        }
-        
-        .faq-question.active:after {
-            content: "-";
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        
-        .faq-answer.active {
-            padding: 0 20px 15px;
-            max-height: 200px;
-        }
-        
-        .social-share {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        
-        .share-label {
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        
-        .share-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .share-button {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background-color: #f3f3f3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .share-button:hover {
-            background-color: #3498db;
-            color: white;
         }
         
         .disclaimer-box {
@@ -570,25 +306,6 @@
             padding-top: 20px;
             border-top: 1px solid #34495e;
         }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .product-section {
-                flex-direction: column;
-            }
-            
-            .thumbnail {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .related-products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-        }
     </style>
 </head>
 <body>
@@ -607,22 +324,15 @@
     </header>
     
     <main class="container">
-        <ul class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Skincare</a></li>
-            <li><a href="#">Cleansing Devices</a></li>
-            <li>UltraGlow Pro</li>
-        </ul>
-        
         <section class="product-section">
             <div class="product-image">
-                <img id="main-product-image" class="main-image" src="/api/placeholder/500/500" alt="UltraGlow Pro - Front View" />
+                <img id="main-product-image" class="main-image" src="/api/placeholder/400/400" alt="UltraGlow Pro Facial Cleansing Brush" />
                 
                 <div class="thumbnail-container">
-                    <img class="thumbnail active" src="/api/placeholder/500/500" alt="UltraGlow Pro - Front View" onclick="changeImage(this, '/api/placeholder/500/500', 'UltraGlow Pro - Front View')" />
-                    <img class="thumbnail" src="/api/placeholder/500/500?text=Side" alt="UltraGlow Pro - Side View" onclick="changeImage(this, '/api/placeholder/500/500?text=Side', 'UltraGlow Pro - Side View')" />
-                    <img class="thumbnail" src="/api/placeholder/500/500?text=Back" alt="UltraGlow Pro - Back View" onclick="changeImage(this, '/api/placeholder/500/500?text=Back', 'UltraGlow Pro - Back View')" />
-                    <img class="thumbnail" src="/api/placeholder/500/500?text=InUse" alt="UltraGlow Pro - In Use" onclick="changeImage(this, '/api/placeholder/500/500?text=InUse', 'UltraGlow Pro - In Use')" />
+                    <img class="thumbnail active" src="/api/placeholder/400/400" alt="UltraGlow Pro - Front View" onclick="changeImage(this, '/api/placeholder/400/400', 'UltraGlow Pro - Front View')" />
+                    <img class="thumbnail" src="/api/placeholder/400/400?text=Side" alt="UltraGlow Pro - Side View" onclick="changeImage(this, '/api/placeholder/400/400?text=Side', 'UltraGlow Pro - Side View')" />
+                    <img class="thumbnail" src="/api/placeholder/400/400?text=Back" alt="UltraGlow Pro - Back View" onclick="changeImage(this, '/api/placeholder/400/400?text=Back', 'UltraGlow Pro - Back View')" />
+                    <img class="thumbnail" src="/api/placeholder/400/400?text=InUse" alt="UltraGlow Pro - In Use" onclick="changeImage(this, '/api/placeholder/400/400?text=InUse', 'UltraGlow Pro - In Use')" />
                 </div>
             </div>
             
@@ -636,8 +346,6 @@
                 
                 <div class="product-price">$89.99</div>
                 
-                <div class="stock-info">In Stock (23 units)</div>
-                
                 <div class="offers-box">
                     <h3 class="offers-title">Special Offers</h3>
                     <div class="offer-item">20% off for new customers with code: NEWGLOW20</div>
@@ -646,25 +354,7 @@
                     <div class="offer-item">30-day money-back guarantee</div>
                 </div>
                 
-                <div class="quantity-selector">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-                </div>
-                
-                <div class="action-buttons">
-                    <button class="cta-button">Add to Cart</button>
-                    <button class="wishlist-button">Add to Wishlist</button>
-                </div>
-                
-                <div class="social-share">
-                    <span class="share-label">Share:</span>
-                    <div class="share-buttons">
-                        <a href="#" class="share-button">f</a>
-                        <a href="#" class="share-button">t</a>
-                        <a href="#" class="share-button">in</a>
-                        <a href="#" class="share-button">p</a>
-                    </div>
-                </div>
+                <a href="#" class="cta-button">Add to Cart</a>
             </div>
         </section>
         
@@ -705,86 +395,35 @@
                 
                 <div id="specifications" class="tab-pane">
                     <h3>Technical Specifications</h3>
-                    <p>Below are the detailed specifications of the UltraGlow Pro Facial Cleansing Brush:</p>
-                    
-                    <table class="specs-table">
-                        <tr>
-                            <th>Specification</th>
-                            <th>Details</th>
-                        </tr>
-                        <tr>
-                            <td>Dimensions</td>
-                            <td>3.5" x 2.8" x 1.2" (89mm x 71mm x 30mm)</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>5.6 oz (160g)</td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>Medical-grade silicone, BPA-free plastic</td>
-                        </tr>
-                        <tr>
-                            <td>Battery</td>
-                            <td>Rechargeable lithium-ion, 600mAh</td>
-                        </tr>
-                        <tr>
-                            <td>Charging Time</td>
-                            <td>2 hours for full charge</td>
-                        </tr>
-                        <tr>
-                            <td>Battery Life</td>
-                            <td>Up to 400 minutes (3 weeks of typical use)</td>
-                        </tr>
-                        <tr>
-                            <td>Waterproof Rating</td>
-                            <td>IPX7 (immersible up to 1 meter for 30 minutes)</td>
-                        </tr>
-                        <tr>
-                            <td>Vibration Modes</td>
-                            <td>5 intensity levels (2,000-8,000 vibrations/minute)</td>
-                        </tr>
-                        <tr>
-                            <td>Colors Available</td>
-                            <td>Pearl White, Rose Gold, Ocean Blue, Mint Green</td>
-                        </tr>
-                        <tr>
-                            <td>Warranty</td>
-                            <td>2-year limited warranty</td>
-                        </tr>
-                    </table>
+                    <p>The UltraGlow Pro features state-of-the-art technology packed into a sleek, ergonomic design:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Dimensions: 3.5" x 2.8" x 1.2"</li>
+                        <li>Weight: 5.6 oz (160g)</li>
+                        <li>Material: Medical-grade silicone</li>
+                        <li>Battery: Rechargeable lithium-ion (600mAh)</li>
+                        <li>Battery Life: Up to 400 minutes on a single charge</li>
+                        <li>Charging Time: 2 hours</li>
+                        <li>Waterproof Rating: IPX7 (fully submersible)</li>
+                        <li>Vibration Modes: 5 intensity levels</li>
+                        <li>Colors Available: Pearl White, Rose Gold, Ocean Blue, Mint Green</li>
+                        <li>Warranty: 2-year limited warranty</li>
+                    </ul>
                 </div>
                 
                 <div id="how-to-use" class="tab-pane">
                     <h3>How to Use Your UltraGlow Pro</h3>
-                    <p>Follow these simple steps to get the most out of your UltraGlow Pro Facial Cleansing Brush:</p>
-                    
-                    <div class="how-to-use-steps">
-                        <div class="step">
-                            <h4>Prepare Your Skin</h4>
-                            <p>Dampen your face with warm water and apply your favorite cleanser directly to your skin or onto the brush head.</p>
-                        </div>
-                        
-                        <div class="step">
-                            <h4>Turn On and Select Mode</h4>
-                            <p>Press the power button once to turn on. Press the mode button to cycle through the 5 intensity levels. We recommend starting with level 1 or 2 for sensitive skin.</p>
-                        </div>
-                        
-                        <div class="step">
-                            <h4>Cleanse in Zones</h4>
-                            <p>Gently move the brush in circular motions across your face. The built-in timer will pulse every 20 seconds to remind you to move to a different area. Focus on T-zone, cheeks, and chin.</p>
-                        </div>
-                        
-                        <div class="step">
-                            <h4>Rinse and Pat Dry</h4>
-                            <p>Rinse your face with water and pat dry with a clean towel. The UltraGlow Pro will automatically turn off after 2 minutes.</p>
-                        </div>
-                        
-                        <div class="step">
-                            <h4>Clean Your Brush</h4>
-                            <p>Rinse the brush head thoroughly with warm water after each use. Allow to air dry completely before storing.</p>
-                        </div>
-                    </div>
+                    <p>For best results, follow these simple steps:</p>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li>Dampen your face with warm water</li>
+                        <li>Apply your favorite cleanser to your face or directly to the brush</li>
+                        <li>Turn on the UltraGlow Pro and select your desired intensity level</li>
+                        <li>Gently move the brush in circular motions across your face, focusing on the T-zone</li>
+                        <li>The built-in timer will pulse every 20 seconds to remind you to move to a different area</li>
+                        <li>After 2 minutes, the device will automatically turn off</li>
+                        <li>Rinse your face with water and pat dry</li>
+                        <li>Clean the brush head thoroughly with water after each use</li>
+                    </ol>
+                    <p style="margin-top: 15px;">For most skin types, we recommend using the UltraGlow Pro once daily. If you have sensitive skin, start with 2-3 times per week and gradually increase frequency.</p>
                 </div>
             </div>
         </section>
@@ -820,52 +459,77 @@
             </div>
         </section>
         
-        <section class="faq-section">
-            <h2 class="faq-title">Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">How often should I use the UltraGlow Pro?</div>
-                <div class="faq-answer">
-                    <p>For most skin types, we recommend using the UltraGlow Pro once daily, preferably in the evening to remove makeup and impurities accumulated throughout the day. If you have sensitive skin, you may want to start with 2-3 times per week and gradually increase frequency as your skin adjusts.</p>
+        <div class="disclaimer-box">
+            <h4>Product Disclaimer</h4>
+            <p>Results may vary based on skin type and condition. The UltraGlow Pro is designed for external use only. Consult with a dermatologist before use if you have any skin conditions or concerns. Not recommended for use on broken skin, active acne, sunburned areas, or with exfoliating products containing granular particles. BeautyTech is not responsible for any allergic reactions or skin irritations resulting from product use.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">About BeautyTech</h3>
+                    <p>BeautyTech is dedicated to creating innovative skincare tools that combine advanced technology with effective, gentle skincare solutions.</p>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p>Address: 123 Beauty Lane, Skincare City, SC 90210</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: support@beautytech.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Help & Support</h3>
+                    <p>Shipping Information</p>
+                    <p>Returns & Refunds</p>
+                    <p>FAQs</p>
                 </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">Can I use the UltraGlow Pro with any cleanser?</div>
-                <div class="faq-answer">
-                    <p>The UltraGlow Pro works with most gel, foam, and cream cleansers. We recommend avoiding cleansers with large exfoliating particles as these can be too abrasive when used with the brush. Oil-based cleansers are also compatible, but may reduce the lifespan of the silicone bristles over time.</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BeautyTech. All Rights Reserved.</p>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">How do I know when to replace the brush head?</div>
-                <div class="faq-answer">
-                    <p>The silicone brush head is designed to last much longer than traditional nylon bristle brushes. We recommend replacing it every 6-12 months, depending on usage frequency. Signs that you need a replacement include discoloration that doesn't wash away, permanent deformation of the bristles, or reduced effectiveness.</p>
-                </div>
-            </div>
-        </section>
+        </div>
+    </footer>
+    
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all tab panes
+                document.querySelectorAll('.tab-pane').forEach(pane => {
+                    pane.classList.remove('active');
+                });
+                
+                // Show the corresponding tab pane
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
         
-        <section class="related-products">
-            <h2 class="related-products-title">You May Also Like</h2>
+        // Image gallery functionality
+        function changeImage(thumbnail, newSrc, altText) {
+            // Update main image
+            const mainImage = document.getElementById('main-product-image');
+            mainImage.src = newSrc;
+            mainImage.alt = altText;
             
-            <div class="related-products-grid">
-                <div class="related-product">
-                    <img class="related-product-img" src="/api/placeholder/300/200?text=Product1" alt="UltraGlow Mini Travel Brush" />
-                    <div class="related-product-info">
-                        <h3 class="related-product-name">UltraGlow Mini Travel Brush</h3>
-                        <div class="related-product-price">$49.99</div>
-                    </div>
-                </div>
-                
-                <div class="related-product">
-                    <img class="related-product-img" src="/api/placeholder/300/200?text=Product2" alt="UltraGlow Replacement Heads (3-Pack)" />
-                    <div class="related-product-info">
-                        <h3 class="related-product-name">UltraGlow Replacement Heads (3-Pack)</h3>
-                        <div class="related-product-price">$29.99</div>
-                    </div>
-                </div>
-                
-                <div class="related-product">
-                    <img class="related-product-img" src="/api/placeholder/300/200?text=Product3" alt="UltraGlow Charging Stand" />
-                    <div class="related-product-info">
-                        <h3 class="related-product-name">Ul
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+        }
+    </script>
+</body>
+</html>
